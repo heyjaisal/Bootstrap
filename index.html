@@ -1,42 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script>
-    function validate(){
-      var username=document.getElementById("lname")
-      var email=document.getElementById("email")
-      var password=document.getElementById("password")
-      var cpassword=document.getElementById("password")
-      var message=document.getElementById("message")
-
-      if(username.value==""){
-        alert("Must have a username");
-        document.form1.username.focus()
-        return false;
-      }
-      if(email.value==""){
-        alert("Must have a email ID");
-        document.form1.email.focus()
-        return false;
-      }
-      if(password.value==""){
-        alert("Must have a password");
-        document.form1.password.focus()
-        return false;
-      }
-      if(cpassword.value==""){
-        alert("Must confirm password");
-        document.form1.cpassword.focus()
-        return false;
-      }
-      if(password.value!=cpassword.value){
-        alert("password is not matching");
-        document.form1.cpassword.focus()
-        return false;
-      }
-
-      return true;
-    }
-  </script>
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <meta charset="UTF-8">
@@ -49,6 +12,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="icon"
     href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKSfD46kMBFWOOdUUuTONAvkGahIX_kIEWUGMWU_3PvWfvLdNfbXfkpBB0LgDBIQ6y2Y8&usqp=CAU">
+  <script src="sample.js"></script>
 </head>
 
 <body>
@@ -260,41 +224,69 @@
 
   <!--form block ends-->
   <!--Footer start here-->
-    <div class="form container">
-      <div class="row">
-        <div class="col-md-8">
-          <h2>About Us</h2>
-          <p>We are a team of experienced outdoor enthusiasts, passionate about sharing our knowledge and experiences
-            with others. Our mission is to inspire and guide people to explore the world beyond their comfort zones.</p>
-            <i style="color: rgb(221, 29, 29);" class="fas fa-map-marker-alt"><span style="color: black;">123 mankavu, kozhikode, kerala, 673007</span></i><br>
-            <i style="color: rgb(51, 249, 1);"  class="fas fa-phone"><span style="color: black;">Phone: (123) 456-7890</span></i><br>
-            <i style="color: rgb(255, 0, 230);"  class="fas fa-envelope"><span style="color: black;">Email:  info@outdooradventure.com</span></i><br>
+  <section class="container pt-5">
+    <div class=" card mb-3 " style="max-width: 100%;">
+      <div class="row g-0">
+        <div class="col-md-6 formcontents ">
 
-            <p>follow us on Social Media For exclusive offers</p>
-            <i style="color: rgb(18, 154, 199);" class="fab fa-twitter"></i>
-            <i style="color: rgb(117, 19, 76);" class="fab fa-instagram"></i>
-            <i style="color: rgb(7, 60, 175);" class="fab fa-facebook-f"></i>
-            <i style="color: rgb(18, 18, 34);" class="fab fa-github"></i>
-            <i style="color: rgb(198, 12, 12);" class="fab fa-pinterest"></i>
-        </div>
-        <div class="col-md-4">
-          <form action="" name="form1" method="post" onsubmit="return validate()">
-            <label for="">Username</label><br>
-            <input type="text" id="lname" name="name"><br>
-            <label for="">email</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="">password</label><br>
-            <input type="password" id="password" name="password" minlength="8" maxlength="10"><br>
-            <label for="">Confirm password</label><br>
-            <input type="password" id="cpassword" name="cpassword" minlength="8" maxlength="10"><br>
-            <label for="">message</label><br>
-            <textarea id="message" name="message" rows="2"></textarea><br>
-            <input type="submit" value="Register"><br>
+          <form class="row g-3 bg-body text-black" name="form1" onsubmit="validate();" >
+            <div class="col-md-6 input-control">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="text" class="form-control" id="inputEmail4" placeholder="jaisal@gmail.com">
+            </div>
+            <div class="col-md-6  input-control">
+              <label for="inputPassword4" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword4">
+
+            </div>
+            <div class="col-12  input-control">
+              <label for="inputname" class="form-label">Name</label>
+              <input type="text" class="form-control" id="inputname" placeholder="Jhon smith">
+
+            </div>
+            <div class="col-12  input-control">
+              <label for="inputdestination" class="form-label">Destinetion</label>
+              <input type="text" class="form-control" id="inputdestination" placeholder="">
+
+            </div>
+            <div class="col-md-6  input-control">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCity">
+
+            </div>
+            <div class="col-12 py-3 text-center">
+              <button type="submit" class="btn btn-success">Submit</button>
+
+            </div>
           </form>
+
+
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h3 class="card-title headinglast">About Us</h3>
+            <h6 class="card-text">We are a team of experienced outdoor enthusiasts, passionate about sharing our
+              knowledge and experiences with others. Our mission is to inspire and guide people to explore the world
+              beyond their comfort zones.</h6>
+
+              <i style="color: rgb(221, 29, 29);" class="fas fa-map-marker-alt"><span style="color: black;">123 mankavu,
+                kozhikode, kerala, 673007</span></i><br>
+            <i style="color: rgb(51, 249, 1);" class="fas fa-phone"><span style="color: black;">Phone: (123)
+                456-7890</span></i><br>
+            <i style="color: rgb(255, 0, 230);" class="fas fa-envelope"><span style="color: black;">Email:
+                info@outdooradventure.com</span></i><br>
+    
+                <p>follow us on Social Media For exclusive offers</p>
+        <i style="color: rgb(18, 154, 199);" class="fab fa-twitter"></i>
+        <i style="color: rgb(117, 19, 76);" class="fab fa-instagram"></i>
+        <i style="color: rgb(7, 60, 175);" class="fab fa-facebook-f"></i>
+        <i style="color: rgb(18, 18, 34);" class="fab fa-github"></i>
+        <i style="color: rgb(198, 12, 12);" class="fab fa-pinterest"></i>
+          </div>
         </div>
       </div>
     </div>
-    <hr>
+  </section>
     <footer>
       <h5 class="foot">&copy; Copywrite Reseverd By Zolve</h5>
     </footer>
